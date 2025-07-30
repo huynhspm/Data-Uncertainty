@@ -1,0 +1,20 @@
+### VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+**/.vscode
+output_dir/
+data/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.env
+.env
+.venv
+venv/
+env/
+*.sh
