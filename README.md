@@ -1,8 +1,29 @@
 # Aleatoric Uncertainty Medical Image Segmentation Estimation via Flow Matching
 
+<a href="https://arxiv.org/abs/2507.22418">
+  <img src="https://img.shields.io/badge/arXiv-2507.22418-b31b1b.svg">
+</a>
+<a href="https://openreview.net/pdf?id=Ny5X1p8Ete">
+  <img src="https://img.shields.io/badge/OpenReview-Ny5X1p8Ete-blue.svg">
+</a>
+<a href="https://link.springer.com/chapter/10.1007/978-3-032-06593-3_13">
+  <img src="https://img.shields.io/badge/Springer-Chapter-green.svg">
+</a>
+<a href="results/poster.pdf">
+  <img src="https://img.shields.io/badge/Download-Poster-red.svg" alt="Download Poster PDF">
+</a>
+
 Official implementation of the paper "Aleatoric Uncertainty Medical Image Segmentation Estimation via Flow Matching" (MICCAI UNSURE Workshop 2025).
 
+## Overview & Results
+
+Our proposed conditional flow matching framework models multi-expert segmentation variability by evolving Gaussian samples $S_0 \sim p_0(S)$ at $t=0$ toward the target distribution $q(S \mid X)$ at $t=1$ using a learned velocity field $u_\theta(t, S, X)$ (green lines). Unlike diffusion methods (red contours), it preserves fine details. Multiple expert annotations (blue, purple, yellow) condition the flow, while the guide image $X$ ensures anatomical alignment.
+
 ![pipeline](results/pipeline.png)
+
+Qualitative comparison on LIDC-IDRI: input images, followed by segmentation masks and uncertainty maps for GT, baselines, and our method.
+![LIDC-IDRI](results/lidc.png)
+
 
 ## Requirements
 - Python 3.6+
@@ -102,3 +123,17 @@ After preprocessing, the folder structure should look like this:
 [2] Ho, Jonathan, and Tim Salimans. "Classifier-free diffusion guidance." arXiv preprint arXiv:2207.12598 (2022).
 
 ## Citation
+
+```bibtex
+@InProceedings{10.1007/978-3-032-06593-3_13,
+    author="Nguyen, Van Phi and Trinh, Ngoc Huynh and Nguyen, Duy Minh Lam and Nguyen, Phu Loc and Tran, Quoc Long",
+    editor="Sudre, Carole H. and Hoque, Mobarak I. and Mehta, Raghav and Ouyang, Cheng and Qin, Chen and Rakic, Marianne and Wells, William M.",
+    title="Aleatoric Uncertainty Medical Image Segmentation Estimation via Flow Matching",
+    booktitle="Uncertainty for Safe Utilization of Machine Learning in Medical Imaging",
+    year="2026",
+    publisher="Springer Nature Switzerland",
+    address="Cham",
+    pages="134--144",
+    isbn="978-3-032-06593-3"
+}
+```
