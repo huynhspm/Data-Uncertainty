@@ -50,7 +50,7 @@ After preprocessing, the folder structure should look like this:
     ├── Val.pickle
 
 ### MMIS
-We used the preprocessed **MMIS** dataset available [here](https://github.com/stefanknegt/Probabilistic-Unet-Pytorch). To prepare the data:
+We used the preprocessed **MMIS** dataset available [here](https://mmis2024.vercel.app/). To prepare the data:
 
 1. Download and extract the dataset into the `data/mmis` directory.
 2. Run the preprocessing scripts located in `dataset/preprocess/mmis`.
